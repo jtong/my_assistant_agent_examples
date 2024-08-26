@@ -1,4 +1,3 @@
-// ai_helper/agent/testAgent.js
 const { Response } = require('ai-agent-response');
 
 class TestAgent {
