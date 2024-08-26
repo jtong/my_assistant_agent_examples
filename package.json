@@ -17,6 +17,8 @@
     "sinon": "^15.0.3"
   },
   "dependencies": {
-    "ai-agent-response": "^1.0.2"
+    "ai-agent-response": "^1.0.2",
+    "https-proxy-agent": "^7.0.5",
+    "openai": "^4.56.0"
   }
 }
