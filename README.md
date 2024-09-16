@@ -56,4 +56,4 @@ npm install
 
 ## 许可证
 
-此项目遵循 ISC 许可证。详情请查看 LICENSE 文件。
+本项目采用 Apache-2.0 许可证。详情请查看 LICENSE 文件。
