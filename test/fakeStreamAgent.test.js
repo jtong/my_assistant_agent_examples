@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const FakeStreamAgent = require('../fakeStreamAgent');
+const FakeStreamAgent = require('../example/fakeStreamAgent');
 const { Response } = require('ai-agent-response');
 
 describe('FakeStreamAgent', function() {

@@ -5,12 +5,16 @@ const dispatcher = new ProxyAgent({ uri: new URL(process.env.https_proxy).toStri
 //全局fetch调用启用代理
 setGlobalDispatcher(dispatcher);
 
-class TestGemeniSyncAgent {
-    constructor(metadata) {
+class TestGeminiSyncAgent {
+    constructor(metadata, settings) {
         this.metadata = metadata;
-        const genAI = new GoogleGenerativeAI(this.metadata.llm.openai.apiKey);
-
-        this.model = genAI.getGenerativeModel({ model: this.metadata.llm.openai.model});
+        this.settings = settings;
+        const llmConfig = {
+            apiKey: this.settings[this.metadata.llm.apiKey],
+            model: this.metadata.llm.model
+        }
+        const genAI = new GoogleGenerativeAI(llmConfig.apiKey);
+        this.model = genAI.getGenerativeModel({ model: llmConfig.model });
     }
 
     async generateReply(thread) {
@@ -22,4 +26,4 @@ class TestGemeniSyncAgent {
     }
 }
 
-module.exports = TestGemeniSyncAgent;
+module.exports = TestGeminiSyncAgent;

@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const TestAgent = require('../testAgent');
+const TestAgent = require('../example/testAgent');
 
 describe('TestAgent', function() {
     let agent;

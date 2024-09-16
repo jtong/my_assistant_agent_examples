@@ -1,8 +1,9 @@
-// fakeStreamAgent.js
+// fakeAgent.js
 const { Response } = require('ai-agent-response');
 
-class FakeStreamAgent {
-    constructor(metadata) {
+class FakeAgent {
+    constructor(metadata, settings) {
+        this.settings = settings;
         this.delay = metadata.delay || 100; // 从metadata中获取延迟，默认为100ms
     }
 
@@ -27,4 +28,4 @@ class FakeStreamAgent {
     }
 }
 
-module.exports = FakeStreamAgent;
+module.exports = FakeAgent;

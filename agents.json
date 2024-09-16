@@ -1,0 +1,58 @@
+{
+    "agents": [
+        {
+            "name": "testAgent",
+            "path": "./example/TestAgent.js",
+            "metadata": {}
+        },
+        {
+            "name": "fakeStreamAgent",
+            "path": "./example/FakeStreamAgent.js",
+            "metadata": {
+                "delay": 500
+            }
+        },
+        {
+            "name": "TestTaskButtonsAgent",
+            "path": "./example/TestTaskButtonsAgent.js",
+            "metadata": {}
+        },
+        {
+            "name": "TestGeminiSyncAgent",
+            "path": "./example/TestGeminiSyncAgent.js",
+            "metadata": {
+                "llm": {
+                    "apiKey": "gemini",
+                    "model": "gemini-1.5-pro"
+                }
+            }
+        },
+        {
+            "name": "GeminiStreamAgent",
+            "path": "./example/TestGeminiStreamAgent.js",
+            "metadata": {
+                "llm": {
+                    "apiKey": "gemini",
+                    "model": "gemini-1.5-pro"
+                }
+            }
+        },
+        {
+            "name": "TestOpneAIAgent",
+            "path": "./example/TestOpneAIAgent.js",
+            "metadata": {
+                "llm": {
+                    "apiKey": "openai",
+                    "model": "gpt-3.5-turbo"
+                }
+            }
+        },
+        {
+            "name": "TestJobAgent",
+            "path": "./example/TestJobAgent.js",
+            "metadata": {
+                "type": "job"
+            }
+        }
+    ]
+}

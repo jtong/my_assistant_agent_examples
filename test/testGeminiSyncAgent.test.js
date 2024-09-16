@@ -1,8 +1,8 @@
 const { expect } = require('chai');
-const TestGemeniSyncAgent = require('../TestGemeniSyncAgent');
+const TestGeminiSyncAgent = require('../example/TestGeminiSyncAgent');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-describe('TestGemeniSyncAgent', function() {
+describe('TestGeminiSyncAgent', function() {
     let agent;
 
     before(function() {
@@ -10,21 +10,20 @@ describe('TestGemeniSyncAgent', function() {
         if (!process.env.GOOGLE_API_KEY) {
             throw new Error('GOOGLE_API_KEY environment variable is not set');
         }
-        console.log(process.env.GOOGLE_API_KEY)
-        agent = new TestGemeniSyncAgent({
-            llm: {
-                openai: {
-                    apiKey: process.env.GOOGLE_API_KEY,
-                    model: 'gemini-1.5-pro' // 或者您想使用的其他Gemini模型
+        agent = new TestGeminiSyncAgent({
+            "llm": {
+                    "apiKey": "gemini",
+                    "model": "gemini-1.5-flash"
                 }
-            }
+        }, {
+            "gemini": process.env.GOOGLE_API_KEY
         });
     });
 
     it('should initialize with correct metadata', function() {
-        expect(agent.metadata.llm.openai.apiKey).to.equal(process.env.GOOGLE_API_KEY);
-        expect(agent.metadata.llm.openai.model).to.equal('gemini-1.5-pro');
-    });
+        expect(agent.metadata.llm.apiKey).to.equal("gemini");
+        expect(agent.metadata.llm.model).to.equal('gemini-1.5-flash');
+   });
 
     it('should generate a reply using Gemini', async function() {
         this.timeout(10000); // 增加超时时间，因为 API 调用可能需要几秒钟
@@ -39,7 +38,7 @@ describe('TestGemeniSyncAgent', function() {
         
         expect(response).to.be.a('string');
         expect(response.toLowerCase()).to.include('paris');
-    });
+    }).timeout(10000);
 
     
 });
