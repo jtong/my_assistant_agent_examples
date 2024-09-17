@@ -1,0 +1,7 @@
+{
+    "knowledge_space": {
+      "knowledge_items": [
+        { "id": 1, "content_path": "role_setup.md", "type": "role_setup" }
+      ]
+    }
+}
