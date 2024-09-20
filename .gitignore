@@ -5,3 +5,4 @@ spike
 ai_helper
 *.log
 memory_repo
+**/output

@@ -21,7 +21,7 @@
     "ai-agent-response": "^1.0.7",
     "https-proxy-agent": "^7.0.5",
     "undici": "^6.19.8",
-    "@jtong/knowledge_query": "^1.0.6",
+    "@jtong/knowledge_query": "^1.0.7",
     "axios": "^1.7.7",
     "js-yaml": "^4.1.0",
     "openai": "^4.56.0",
