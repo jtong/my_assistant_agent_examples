@@ -1,0 +1,9 @@
+{
+    "agents": [
+        {
+            "name": "testAgent",
+            "path": "./hello_world_agent/entryAgent.js",
+            "metadata": {}
+        }
+    ]
+}
