@@ -4,6 +4,13 @@
             "name": "testAgent",
             "path": "./hello_world_agent/entryAgent.js",
             "metadata": {}
+        },
+        {
+            "name": "StreamAgent",
+            "path": "./stream_agent/StreamAgent.js",
+            "metadata": {
+                "delay": 100
+            }
         }
     ]
 }
