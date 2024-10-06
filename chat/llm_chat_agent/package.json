@@ -1,0 +1,9 @@
+{
+    "name": "openai_stream_agent",
+    "version": "1.0.0",
+    "main": "OpenAIStreamAgent.js",
+    "dependencies": {
+      "ai-agent-response": "^1.0.9",
+      "openai": "^4.56.0"
+    }
+  }

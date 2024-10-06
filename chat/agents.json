@@ -11,6 +11,51 @@
             "metadata": {
                 "delay": 100
             }
+        },
+        {
+            "name": "MultiModelAgent",
+            "path": "./multi_llm_agent/MultiModelAgent.js",
+            "settings": {
+                "currentModel": {
+                    "apiKey": "openai",
+                    "model": "gpt-3.5-turbo"
+                }
+            },
+            "operations": [
+                {
+                    "type": "setting",
+                    "control": "select",
+                    "name": "AI Platform",
+                    "settingKey": "currentModel",
+                    "options": [
+                        {
+                            "label": "openai__gpt-3.5",
+                            "value": {
+                                "apiKey": "openai",
+                                "model": "gpt-3.5-turbo"
+                            }
+                        },
+                        {
+                            "label": "gemini__1.5-flash",
+                            "value": {
+                                "apiKey": "gemini",
+                                "model": "gemini-1.5-flash"
+                            }
+                        },
+                        {
+                            "label": "localLLM__gemma-2-2b",
+                            "value": {
+                                "model": "lmstudio-community/gemma-2-2b-it-GGUF/gemma-2-2b-it-Q4_K_M.gguf"
+                            }
+                        }
+                    ],
+                    "default": {
+                        "apiKey": "openai",
+                        "model": "gpt-3.5-turbo"
+                    }
+                }
+            ],
+            "metadata": {}
         }
     ]
 }

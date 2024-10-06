@@ -6,3 +6,4 @@ ai_helper
 *.log
 memory_repo
 **/output
+**/package-lock.json
