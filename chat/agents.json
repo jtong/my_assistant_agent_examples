@@ -13,6 +13,36 @@
             }
         },
         {
+            "name": "OpenAIStreamAgent",
+            "path": "./llm_chat_agent/OpenAIStreamAgent.js",
+            "metadata": {
+              "llm": {
+                "apiKey": "openai",
+                "model": "gpt-3.5-turbo"
+              }
+            }
+          },
+          {
+            "name": "GeminiStreamAgent",
+            "path": "./llm_chat_agent/GeminiStreamAgent.js",
+            "metadata": {
+              "llm": {
+                "apiKey": "gemini",
+                "model": "gemini-1.0-pro"
+              }
+            }
+        },
+        {
+          "name": "DeepSeekStreamAgent",
+          "path": "./llm_chat_agent/DeepSeekStreamAgent.js",
+          "metadata": {
+            "llm": {
+              "apiKey": "deepseek",
+              "model": "deepseek-chat"
+            }
+          }
+        },
+        {
             "name": "MultiModelAgent",
             "path": "./multi_llm_agent/MultiModelAgent.js",
             "settings": {
