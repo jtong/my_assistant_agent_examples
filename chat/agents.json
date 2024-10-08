@@ -16,31 +16,31 @@
             "name": "OpenAIStreamAgent",
             "path": "./llm_chat_agent/OpenAIStreamAgent.js",
             "metadata": {
-              "llm": {
-                "apiKey": "openai",
-                "model": "gpt-3.5-turbo"
-              }
-            }
-          },
-          {
-            "name": "GeminiStreamAgent",
-            "path": "./llm_chat_agent/GeminiStreamAgent.js",
-            "metadata": {
-              "llm": {
-                "apiKey": "gemini",
-                "model": "gemini-1.0-pro"
-              }
+                "llm": {
+                    "apiKey": "openai",
+                    "model": "gpt-3.5-turbo"
+                }
             }
         },
         {
-          "name": "DeepSeekStreamAgent",
-          "path": "./llm_chat_agent/DeepSeekStreamAgent.js",
-          "metadata": {
-            "llm": {
-              "apiKey": "deepseek",
-              "model": "deepseek-chat"
+            "name": "GeminiStreamAgent",
+            "path": "./llm_chat_agent/GeminiStreamAgent.js",
+            "metadata": {
+                "llm": {
+                    "apiKey": "gemini",
+                    "model": "gemini-1.5-flash"
+                }
             }
-          }
+        },
+        {
+            "name": "DeepSeekStreamAgent",
+            "path": "./llm_chat_agent/DeepSeekStreamAgent.js",
+            "metadata": {
+                "llm": {
+                    "apiKey": "deepseek",
+                    "model": "deepseek-chat"
+                }
+            }
         },
         {
             "name": "MultiModelAgent",
@@ -86,6 +86,25 @@
                 }
             ],
             "metadata": {}
+        },
+        {
+            "name": "OperationButtonAgent",
+            "path": "./ui_features/OperationButtonAgent.js",
+            "metadata": {},
+            "operations": [
+                {
+                    "name": "重置上下文",
+                    "control": "button",
+                    "type": "task",
+                    "task":{
+                        "name": "AddMarker",
+                        "type": "action",
+                        "skipUserMessage": true,
+                        "skipBotMessage": true
+                    }
+                    
+                }
+            ]
         }
     ]
 }
