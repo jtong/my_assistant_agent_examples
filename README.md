@@ -8,9 +8,15 @@
 
 本网站进行了域名指向，可以使用jtong.dev域名访问，从而避免一些网络障碍。
 
-比如： `https://raw.githubusercontent.com/jtong/my_assistant_agent_examples/refs/heads/main/chat/use_case/ContextBuildAndResetAgent.js`
+比如： 
 
-可以通过 `https://jtong.dev/my_assistant_agent_examples/chat/use_case/ContextBuildAndResetAgent.js` 访问到。
+[https://raw.githubusercontent.com/jtong/my_assistant_agent_examples/refs/heads/main/chat/use_case/ContextBuildAndResetAgent.js](https://raw.githubusercontent.com/jtong/my_assistant_agent_examples/refs/heads/main/chat/use_case/ContextBuildAndResetAgent.js)
+
+可以通过:
+
+[https://jtong.dev/my_assistant_agent_examples/chat/use_case/ContextBuildAndResetAgent.js](https://jtong.dev/my_assistant_agent_examples/chat/use_case/ContextBuildAndResetAgent.js) 
+
+访问到。
 
 ## 注意事项
 
