@@ -105,6 +105,24 @@
                     
                 }
             ]
-        }
+        },
+        {
+            "name": "ContextBuildAndResetAgent",
+            "path": "./use_case/ContextBuildAndResetAgent.js",
+            "metadata": {},
+            "operations": [
+              {
+                "name": "重置上下文",
+                "control": "button",
+                "type": "task",
+                "task": {
+                  "name": "ResetContext",
+                  "type": "action",
+                  "skipUserMessage": true,
+                  "skipBotMessage": true
+                }
+              }
+            ]
+          }
     ]
 }
