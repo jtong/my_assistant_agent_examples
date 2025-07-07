@@ -1,0 +1,16 @@
+{
+  "knowledge_space": {
+    "knowledge_items": [
+      {
+        "id": 0,
+        "content": "",
+        "type": "memory"
+      },
+      {
+        "id": 1,
+        "content": -1,
+        "type": "memory_summary_index"
+      }
+    ]
+  }
+}

@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ai-agent-response": "^1.0.9"
+    "ai-agent-response": "^1.1.4"
   }
 }

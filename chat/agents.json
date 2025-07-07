@@ -7,7 +7,7 @@
         },
         {
             "name": "StreamAgent",
-            "path": "./stream_agent/StreamAgent.js",
+            "path": "./stream_agent/entryAgent.js",
             "metadata": {
                 "delay": 100
             }
@@ -100,7 +100,10 @@
                         "name": "AddMarker",
                         "type": "action",
                         "skipUserMessage": true,
-                        "skipBotMessage": true
+                        "skipBotMessage": true,
+                        "meta":{
+
+                        }
                     }
                     
                 }
@@ -119,10 +122,45 @@
                   "name": "ResetContext",
                   "type": "action",
                   "skipUserMessage": true,
-                  "skipBotMessage": true
+                  "skipBotMessage": true,
+                  "meta":{}
                 }
               }
             ]
-          }
+        },
+        {
+            "name": "Multi_Profile_Studio_Agent",
+            "path": "./multi_profile_studio_agent/entryAgent.js",
+            "settings": {
+                "role_status": "none",
+                "system_prompt": "default",
+                "messageHandler": "direct",
+                "llm_profile": "profile1"
+            },
+            
+            "metadata": {
+                "default_llm_profile": "profile1",
+                "default_llm_model": "gemini-2.5-pro-exp-03-25",
+                "llm_profile": {
+                    "profile1": {
+                        "apiKey": "sk-1234",
+                        "baseURL": "https://profile1/v1"
+                    },
+                    "profile2": {
+                        "baseURL": "https://profile2.com/v1",
+                        "apiKey": "sk-5678"
+                    },
+                    "profile_anyhow": {
+                        "baseURL": "https://profile_anyhow.com/v1",
+                        "apiKey": "sk-abcd"
+                    }
+                },
+                "agent": {
+                    "templatePath": "prompt/system_prompt/default.md",
+                    "repoFilePath": "prompt/knowledge_space/repo.json"
+                }
+            }
+        }
+
     ]
 }
